@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+//    alias(libs.plugins.parcelize)
 }
 
 android {
@@ -53,14 +54,15 @@ dependencies {
     implementation(libs.recyclerview)
     implementation(libs.sdp)
     implementation(libs.ssp)
-    implementation(libs.paging)
     implementation(libs.glide)
     implementation(libs.compiler)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.gson)
-//    implementation(libs.lifecyclee)
-//    implementation(libs.arch)
-//    implementation(libs.lifecycle.compiler)
+    implementation(libs.coroutines)
+    implementation(libs.livedata)
+    implementation(libs.viewmodel)
+    implementation(libs.coroutines.android)
+    implementation(libs.interceptor)
 
 }

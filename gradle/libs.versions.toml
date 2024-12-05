@@ -1,6 +1,7 @@
 [versions]
 agp = "8.6.0"
 kotlin = "1.9.0"
+parcel = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -13,12 +14,15 @@ cardview="1.0.0"
 recyclerview="1.3.2"
 sdp="1.0.6"
 ssp="1.0.6"
-paging="3.3.2"
 glide="4.11.0"
 compiler="4.11.0"
 retrofit="2.8.1"
 lifecycle="2.2.0"
 gson="2.10.1"
+coroutines='1.7.3'
+livedata='2.8.6'
+viewmodel='2.8.6'
+interceptor='4.10.0'
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,18 +38,23 @@ cardview = { group = "androidx.cardview", name = "cardview", version.ref = "card
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 sdp = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "sdp" }
 ssp = { group = "com.intuit.ssp", name = "ssp-android", version.ref = "ssp" }
-paging = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "compiler" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
-#lifecyclee = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycle" }
-#arch = { group = "android.arch.lifecycle", name = "extensions", version.ref = "lifecycle" }
-#lifecycle-compiler = { group = "android.arch.lifecycle", name = "compiler", version.ref = "lifecycle" }
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "livedata" }
+viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodel" }
+interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "interceptor" }
+
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+parcelize= { id = "kotlin-parcelize" }
 
 
