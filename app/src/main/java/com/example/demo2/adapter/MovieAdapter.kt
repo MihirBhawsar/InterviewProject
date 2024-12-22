@@ -7,7 +7,7 @@ import com.example.demo2.ClickListener.OnMovieClickListener
 import com.example.demo2.databinding.MovieLayoutBinding
 import com.example.demo2.model.Movie
 
-class MovieAdapter(private val movies: List<Movie>,private val listener: OnMovieClickListener
+class MovieAdapter(private val movies: List<Movie>,private val onClick:(Movie)->Unit
 ) :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
@@ -19,7 +19,7 @@ class MovieAdapter(private val movies: List<Movie>,private val listener: OnMovie
 
             // Handle item click by passing the click event to the listener
             binding.root.setOnClickListener {
-                listener.onMovieClick(movie)
+                onClick(movie)
             }
         }
     }

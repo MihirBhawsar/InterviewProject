@@ -1,17 +1,20 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-//    alias(libs.plugins.parcelize)
+    alias(libs.plugins.kotlin.hilt)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.parcelize)
+
 }
 
 android {
     namespace = "com.example.demo2"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.demo2"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -64,5 +67,7 @@ dependencies {
     implementation(libs.viewmodel)
     implementation(libs.coroutines.android)
     implementation(libs.interceptor)
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
 
 }

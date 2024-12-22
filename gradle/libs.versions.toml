@@ -1,15 +1,15 @@
 [versions]
-agp = "8.6.0"
+agp = "8.6.1"
 kotlin = "1.9.0"
 parcel = "1.9.0"
-coreKtx = "1.13.1"
+coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
-activity = "1.9.2"
-constraintlayout = "2.1.4"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
 cardview="1.0.0"
 recyclerview="1.3.2"
 sdp="1.0.6"
@@ -20,9 +20,13 @@ retrofit="2.8.1"
 lifecycle="2.2.0"
 gson="2.10.1"
 coroutines='1.7.3'
-livedata='2.8.6'
-viewmodel='2.8.6'
+livedata='2.8.7'
+viewmodel='2.8.7'
 interceptor='4.10.0'
+hilt="2.51.1"
+kotlinKapt="1.8.0"
+kotlinPlugin = "1.8.10"
+hiltVersion="2.51.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,13 +52,17 @@ coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutin
 livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "livedata" }
 viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodel" }
 interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "interceptor" }
-
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler" , version.ref = "hiltVersion"}
 
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-parcelize= { id = "kotlin-parcelize" }
+kotlin-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize",  version.ref = "kotlinPlugin"  }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinKapt" }
+
 
 
